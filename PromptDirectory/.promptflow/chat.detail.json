@@ -1,0 +1,348 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "de5d7cfa-67cd-49c8-803a-27233c056ea2_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "chat_history": [
+          {
+            "inputs": {
+              "question": "Who won Fifa 2022?"
+            },
+            "outputs": {
+              "answer": "I'm sorry, but as an AI, I don't have real-time information. The FIFA World Cup 2022 is scheduled to take place in Qatar from November 21 to December 18, 2022. The winner of the tournament will be determined at that time."
+            }
+          },
+          {
+            "inputs": {
+              "question": "Where is Neom Ciy?"
+            },
+            "outputs": {
+              "answer": "Neom City is a planned futuristic city that is being developed in Saudi Arabia. It is situated in the northwest region of the country, close to the borders of Jordan and Egypt, along the Red Sea coast. The project aims to create a sustainable and technologically advanced city, covering an area of around 26,500 square kilometers."
+            }
+          },
+          {
+            "inputs": {
+              "question": "C:\\Users\\meetr\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m promptflow._cli._pf.entry flow test --flow c:\\Projects\\MS-Prompt-Flow\\PromptDirectory --interactive"
+            },
+            "outputs": {
+              "answer": "It seems like you are trying to execute a specific command related to the PromptFlow Python library. However, as an AI assistant, I am unable to run or execute commands on your local machine. If you have any questions or need assistance with the PromptFlow library or any other topic, feel free to ask, and I'll do my best to help you."
+            }
+          },
+          {
+            "inputs": {
+              "question": "Where is Dubai?"
+            },
+            "outputs": {
+              "answer": "Dubai is located in the United Arab Emirates (UAE), which is situated in the Middle East. It is on the southeastern coast of the Arabian Peninsula, bordering the Persian Gulf. Dubai is one of the seven emirates that make up the UAE and is known for its modern architecture, luxury shopping, vibrant nightlife, and iconic landmarks such as the Burj Khalifa, Palm Jumeirah, and Dubai Marina."
+            }
+          }
+        ],
+        "question": "Where is Dubai?"
+      },
+      "output": {
+        "answer": "Dubai is located in the United Arab Emirates (UAE), which is situated in the Middle East. It is on the southeastern coast of the Arabian Peninsula, bordering the Persian Gulf. Dubai is one of the seven emirates that make up the UAE and is known for its modern architecture, luxury shopping, vibrant nightlife, and iconic landmarks such as the Burj Khalifa, Palm Jumeirah, and Dubai Marina."
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "de5d7cfa-67cd-49c8-803a-27233c056ea2",
+      "root_run_id": "de5d7cfa-67cd-49c8-803a-27233c056ea2",
+      "source_run_id": null,
+      "flow_id": "template_chat_flow",
+      "start_time": "2023-09-11T19:36:09.828389Z",
+      "end_time": "2023-09-11T19:36:10.529884Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "OpenAI.chat",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "system:\nYou are a helpful assistant.\n\n{% for item in chat_history %}\nuser:\n{{item.inputs.question}}\nassistant:\n{{item.outputs.answer}}\n{% endfor %}\n\nuser:\n{{question}}",
+            "chat_history": [
+              {
+                "inputs": {
+                  "question": "Who won Fifa 2022?"
+                },
+                "outputs": {
+                  "answer": "I'm sorry, but as an AI, I don't have real-time information. The FIFA World Cup 2022 is scheduled to take place in Qatar from November 21 to December 18, 2022. The winner of the tournament will be determined at that time."
+                }
+              },
+              {
+                "inputs": {
+                  "question": "Where is Neom Ciy?"
+                },
+                "outputs": {
+                  "answer": "Neom City is a planned futuristic city that is being developed in Saudi Arabia. It is situated in the northwest region of the country, close to the borders of Jordan and Egypt, along the Red Sea coast. The project aims to create a sustainable and technologically advanced city, covering an area of around 26,500 square kilometers."
+                }
+              },
+              {
+                "inputs": {
+                  "question": "C:\\Users\\meetr\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m promptflow._cli._pf.entry flow test --flow c:\\Projects\\MS-Prompt-Flow\\PromptDirectory --interactive"
+                },
+                "outputs": {
+                  "answer": "It seems like you are trying to execute a specific command related to the PromptFlow Python library. However, as an AI assistant, I am unable to run or execute commands on your local machine. If you have any questions or need assistance with the PromptFlow library or any other topic, feel free to ask, and I'll do my best to help you."
+                }
+              }
+            ],
+            "max_tokens": 256,
+            "model": "gpt-3.5-turbo",
+            "question": "Where is Dubai?",
+            "temperature": 0.7,
+            "stream": true
+          },
+          "output": [],
+          "start_time": 1694478969.829145,
+          "end_time": 1694478970.529884,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
+              "type": "LLM",
+              "inputs": {
+                "organization": "",
+                "model": "gpt-3.5-turbo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a helpful assistant."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Who won Fifa 2022?"
+                  },
+                  {
+                    "role": "assistant",
+                    "content": "I'm sorry, but as an AI, I don't have real-time information. The FIFA World Cup 2022 is scheduled to take place in Qatar from November 21 to December 18, 2022. The winner of the tournament will be determined at that time."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Where is Neom Ciy?"
+                  },
+                  {
+                    "role": "assistant",
+                    "content": "Neom City is a planned futuristic city that is being developed in Saudi Arabia. It is situated in the northwest region of the country, close to the borders of Jordan and Egypt, along the Red Sea coast. The project aims to create a sustainable and technologically advanced city, covering an area of around 26,500 square kilometers."
+                  },
+                  {
+                    "role": "user",
+                    "content": "C:\\Users\\meetr\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m promptflow._cli._pf.entry flow test --flow c:\\Projects\\MS-Prompt-Flow\\PromptDirectory --interactive"
+                  },
+                  {
+                    "role": "assistant",
+                    "content": "It seems like you are trying to execute a specific command related to the PromptFlow Python library. However, as an AI assistant, I am unable to run or execute commands on your local machine. If you have any questions or need assistance with the PromptFlow library or any other topic, feel free to ask, and I'll do my best to help you."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Where is Dubai?"
+                  }
+                ],
+                "temperature": 0.7,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": true,
+                "stop": null,
+                "max_tokens": 256,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "logit_bias": {},
+                "user": ""
+              },
+              "output": [],
+              "start_time": 1694478969.829145,
+              "end_time": 1694478970.529884,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "chat"
+        }
+      ],
+      "variant_id": "",
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 0.701495,
+        "total_tokens": 0
+      },
+      "result": {
+        "answer": "Dubai is located in the United Arab Emirates (UAE), which is situated in the Middle East. It is on the southeastern coast of the Arabian Peninsula, bordering the Persian Gulf. Dubai is one of the seven emirates that make up the UAE and is known for its modern architecture, luxury shopping, vibrant nightlife, and iconic landmarks such as the Burj Khalifa, Palm Jumeirah, and Dubai Marina."
+      },
+      "upload_metrics": false
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "chat",
+      "flow_run_id": "de5d7cfa-67cd-49c8-803a-27233c056ea2",
+      "run_id": "de5d7cfa-67cd-49c8-803a-27233c056ea2_chat_0",
+      "status": "Completed",
+      "inputs": {
+        "prompt": "system:\nYou are a helpful assistant.\n\n{% for item in chat_history %}\nuser:\n{{item.inputs.question}}\nassistant:\n{{item.outputs.answer}}\n{% endfor %}\n\nuser:\n{{question}}",
+        "chat_history": [
+          {
+            "inputs": {
+              "question": "Who won Fifa 2022?"
+            },
+            "outputs": {
+              "answer": "I'm sorry, but as an AI, I don't have real-time information. The FIFA World Cup 2022 is scheduled to take place in Qatar from November 21 to December 18, 2022. The winner of the tournament will be determined at that time."
+            }
+          },
+          {
+            "inputs": {
+              "question": "Where is Neom Ciy?"
+            },
+            "outputs": {
+              "answer": "Neom City is a planned futuristic city that is being developed in Saudi Arabia. It is situated in the northwest region of the country, close to the borders of Jordan and Egypt, along the Red Sea coast. The project aims to create a sustainable and technologically advanced city, covering an area of around 26,500 square kilometers."
+            }
+          },
+          {
+            "inputs": {
+              "question": "C:\\Users\\meetr\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m promptflow._cli._pf.entry flow test --flow c:\\Projects\\MS-Prompt-Flow\\PromptDirectory --interactive"
+            },
+            "outputs": {
+              "answer": "It seems like you are trying to execute a specific command related to the PromptFlow Python library. However, as an AI assistant, I am unable to run or execute commands on your local machine. If you have any questions or need assistance with the PromptFlow library or any other topic, feel free to ask, and I'll do my best to help you."
+            }
+          },
+          {
+            "inputs": {
+              "question": "Where is Dubai?"
+            },
+            "outputs": {
+              "answer": "Dubai is located in the United Arab Emirates (UAE), which is situated in the Middle East. It is on the southeastern coast of the Arabian Peninsula, bordering the Persian Gulf. Dubai is one of the seven emirates that make up the UAE and is known for its modern architecture, luxury shopping, vibrant nightlife, and iconic landmarks such as the Burj Khalifa, Palm Jumeirah, and Dubai Marina."
+            }
+          }
+        ],
+        "max_tokens": 256,
+        "model": "gpt-3.5-turbo",
+        "question": "Where is Dubai?",
+        "temperature": 0.7,
+        "stream": true
+      },
+      "output": "<generator object generate_from_proxy at 0x000001BA64EA0C40>",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "de5d7cfa-67cd-49c8-803a-27233c056ea2_0",
+      "start_time": "2023-09-11T19:36:09.829145Z",
+      "end_time": "2023-09-11T19:36:10.529884Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "OpenAI.chat",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "system:\nYou are a helpful assistant.\n\n{% for item in chat_history %}\nuser:\n{{item.inputs.question}}\nassistant:\n{{item.outputs.answer}}\n{% endfor %}\n\nuser:\n{{question}}",
+            "chat_history": [
+              {
+                "inputs": {
+                  "question": "Who won Fifa 2022?"
+                },
+                "outputs": {
+                  "answer": "I'm sorry, but as an AI, I don't have real-time information. The FIFA World Cup 2022 is scheduled to take place in Qatar from November 21 to December 18, 2022. The winner of the tournament will be determined at that time."
+                }
+              },
+              {
+                "inputs": {
+                  "question": "Where is Neom Ciy?"
+                },
+                "outputs": {
+                  "answer": "Neom City is a planned futuristic city that is being developed in Saudi Arabia. It is situated in the northwest region of the country, close to the borders of Jordan and Egypt, along the Red Sea coast. The project aims to create a sustainable and technologically advanced city, covering an area of around 26,500 square kilometers."
+                }
+              },
+              {
+                "inputs": {
+                  "question": "C:\\Users\\meetr\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m promptflow._cli._pf.entry flow test --flow c:\\Projects\\MS-Prompt-Flow\\PromptDirectory --interactive"
+                },
+                "outputs": {
+                  "answer": "It seems like you are trying to execute a specific command related to the PromptFlow Python library. However, as an AI assistant, I am unable to run or execute commands on your local machine. If you have any questions or need assistance with the PromptFlow library or any other topic, feel free to ask, and I'll do my best to help you."
+                }
+              }
+            ],
+            "max_tokens": 256,
+            "model": "gpt-3.5-turbo",
+            "question": "Where is Dubai?",
+            "temperature": 0.7,
+            "stream": true
+          },
+          "output": [],
+          "start_time": 1694478969.829145,
+          "end_time": 1694478970.529884,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
+              "type": "LLM",
+              "inputs": {
+                "organization": "",
+                "model": "gpt-3.5-turbo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a helpful assistant."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Who won Fifa 2022?"
+                  },
+                  {
+                    "role": "assistant",
+                    "content": "I'm sorry, but as an AI, I don't have real-time information. The FIFA World Cup 2022 is scheduled to take place in Qatar from November 21 to December 18, 2022. The winner of the tournament will be determined at that time."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Where is Neom Ciy?"
+                  },
+                  {
+                    "role": "assistant",
+                    "content": "Neom City is a planned futuristic city that is being developed in Saudi Arabia. It is situated in the northwest region of the country, close to the borders of Jordan and Egypt, along the Red Sea coast. The project aims to create a sustainable and technologically advanced city, covering an area of around 26,500 square kilometers."
+                  },
+                  {
+                    "role": "user",
+                    "content": "C:\\Users\\meetr\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m promptflow._cli._pf.entry flow test --flow c:\\Projects\\MS-Prompt-Flow\\PromptDirectory --interactive"
+                  },
+                  {
+                    "role": "assistant",
+                    "content": "It seems like you are trying to execute a specific command related to the PromptFlow Python library. However, as an AI assistant, I am unable to run or execute commands on your local machine. If you have any questions or need assistance with the PromptFlow library or any other topic, feel free to ask, and I'll do my best to help you."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Where is Dubai?"
+                  }
+                ],
+                "temperature": 0.7,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": true,
+                "stop": null,
+                "max_tokens": 256,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "logit_bias": {},
+                "user": ""
+              },
+              "output": [],
+              "start_time": 1694478969.829145,
+              "end_time": 1694478970.529884,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "chat"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.700739
+      },
+      "result": "<generator object generate_from_proxy at 0x000001BA64EA0C40>"
+    }
+  ]
+}
